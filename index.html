@@ -10,24 +10,84 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    body {
+      background-color: hsl(0, 0%, 94%);
+    }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .app {
+      width: 600px;
+      height: 500px;
+      background-color: white;
+      box-shadow: 2px 2px 25px 5px  gray;
+      border-radius: 30px 30px 100px 30px;
+      margin-top: 10%;
+    }
+
+    .app table {
+      margin-top: 5%;
+      text-align: left;
+      border-color: black;
+      width: 600px;
+    }
+    .app input {
+      width: 115px;
+      border-radius: 5px;
+      border-width: 1px;
+      border-color: #dedbdb;
+      height: 30px;
+      font-size: 14px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
+  <div class="container">
+    <div class="app">
+      <table cellspacing=14 border=1>
+        <tr>
+          <th>DAY</th>
+          <th>MONTH</th>
+          <th>YEAR</th>
+          <th style="width: 30%" rowspan="2"></th>
+        </tr>
+        <tr>
+          <td><input type="numerical" name="dayInput"></td>
+          <td><input type="numerical" name="monthInput"></td>
+          <td><input type="numerical" name="yearInput"></td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan=4>
+            <span class="dateText1">- -</span>
+            <span class="dateText2">years</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan=4>
+            <span class="dateText1">- -</span>
+            <span class="dateText2">months</span>
+          </td>
+        </tr>
+        <tr>
+          <td colspan=4>
+            <span class="dateText1">- -</span>
+            <span class="dateText2">days</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
